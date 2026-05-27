@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import LoanManagementDemo from './LoanManagementDemo';
 
 export const metadata: Metadata = {
-  title: 'Loan Management Demo',
+  title: 'SCSS Loan & Accounting Workflow Demo',
   description:
-    'Interactive demo of a loan request management system — submit requests, filter by status, and track approval workflows. Built with React and TypeScript.',
+    'Interactive portfolio demo of an enterprise loan request and approval system — add requests, submit for review, approve or reject with reasons, and track workflow status. Inspired by real internal system experience. Built with React and TypeScript.',
 };
 
 export default function LoanManagementPage() {

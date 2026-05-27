@@ -4,30 +4,30 @@ export const projects: Project[] = [
   {
     id: '1',
     slug: 'scss-accounting-loan',
-    title: 'Sugar Cane Support System — Accounting & Loan Module',
+    title: 'Sugar Cane Support System — Loan & Accounting Module',
     shortDescription:
-      'Developed and maintained accounting and loan workflow modules for an internal enterprise system, covering UI, API, and SQL Server database operations.',
-    longDescription: `The Sugar Cane Support System (SCSS) is an internal enterprise application used to manage sugarcane-related business operations. My primary contribution was the Accounting and Loan Module, which handles financial calculations, loan tracking, and data workflows.
+      'Manual loan tracking and fragmented approval steps made financial workflows slow and error-prone. Built a multi-step loan request and approval system with status tracking, accounting summaries, and SQL Server-backed data operations.',
+    longDescription: `**Problem:** Manual loan tracking and fragmented approval steps made financial workflows slow and error-prone — officers spent time correcting entries instead of processing requests.
 
-Working end-to-end across the stack, I built and maintained REST API endpoints in C# .NET, integrated the frontend UI with backend business logic, and wrote optimized SQL Server stored procedures to support data-intensive operations.
+**Solution:** A structured loan request and approval workflow covering submission, multi-step review (Draft → Submitted → Under Review → Approved / Rejected), and accounting summary views. Built as part of the Sugar Cane Support System (SCSS), an internal enterprise application for managing agricultural financial operations.
 
-The module improved accuracy in financial record-keeping and reduced manual steps in the accounting workflow through better validation and structured data flows.`,
+Full-stack work: C# .NET REST API endpoints, SQL Server stored procedures for data-intensive operations, and frontend UI integrated with backend business logic. Validation at every layer reduced data entry errors and improved record accuracy across the accounting module.`,
     tech: ['C#', '.NET', 'SQL Server', 'Stored Procedures', 'JavaScript', 'TypeScript'],
     category: 'fullstack',
     featured: true,
     demoUrl: '/demo/loan-management',
     features: [
-      'REST API endpoints for accounting and loan workflows',
-      'SQL Server stored procedures for data read/write operations',
-      'Frontend UI integration with .NET backend',
-      'Loan calculation and tracking module',
-      'Data validation and error handling across layers',
-      'Maintenance and enhancement of existing modules',
+      'Multi-step approval workflow: Draft → Submitted → Under Review → Approved / Rejected',
+      'Loan request management with contract tracking and purpose recording',
+      'Accounting summary dashboard: total requests, pending review, approved amount, rejected count',
+      'REST API endpoints for loan and accounting CRUD operations',
+      'SQL Server stored procedures for financial data aggregation',
+      'Input validation at UI and API layers to reduce entry errors',
     ],
     highlights: [
-      'Full-stack ownership from UI through API to database',
-      'Improved data accuracy by refining validation logic',
-      'Reduced manual steps through structured workflow improvements',
+      'Multi-step approval workflow replaced manual ad-hoc review process',
+      'Accounting summaries gave finance officers instant status visibility',
+      'Full-stack ownership from UI through API to stored procedures',
     ],
     status: 'completed',
     year: 2024,
