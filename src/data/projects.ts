@@ -35,30 +35,30 @@ The module improved accuracy in financial record-keeping and reduced manual step
   {
     id: '2',
     slug: 'trr-mes-timesheet',
-    title: 'TRR Dynamic AX MES — Timesheet Module',
+    title: 'TRR Dynamic AX MES — Timesheet & Worklog Module',
     shortDescription:
-      'Built timesheet features for a Manufacturing Execution System, covering entry, reporting, and integration with the existing .NET and SQL Server backend.',
-    longDescription: `TRR Dynamic AX is a Manufacturing Execution System (MES) used for managing production operations at Thai Roong Ruang Technologies. I developed the Timesheet module, which handles employee time logging, submission, and reporting.
+      'Manual or fragmented timesheet tracking makes OT calculation and approval review difficult. Built a shift-aware timesheet dashboard with worklog entry, auto OT calculation, approval workflow, and management summaries.',
+    longDescription: `**Problem:** Manual or fragmented timesheet tracking makes OT calculation and approval review difficult — operators lose time correcting entries, supervisors struggle to get accurate summary views.
 
-The module was built on an existing .NET and SQL Server stack, with a React TypeScript frontend. I focused on improving the accuracy of timesheet data entry and making daily usability smoother for operators and supervisors.
+**Solution:** A shift-aware timesheet dashboard with filters, worklog entry, OT calculation, status workflow, and management summaries. Built as part of TRR Dynamic AX, a Manufacturing Execution System used for production operations.
 
-Key work included designing the data entry UI, building API endpoints for CRUD operations, and writing reporting views backed by SQL Server queries.`,
+Full-stack work across React TypeScript frontend, C# .NET REST API, and SQL Server stored procedures. The module handles daily worklog submission, shift-based OT calculation (overtime after each shift's normal end time), and a structured approval flow from operator through supervisor.`,
     tech: ['C#', '.NET', 'SQL Server', 'React', 'TypeScript', 'Stored Procedures'],
     category: 'fullstack',
     featured: true,
     demoUrl: '/demo/timesheet-dashboard',
     features: [
-      'Timesheet entry and submission UI built in React + TypeScript',
-      'REST API endpoints for timesheet CRUD operations',
-      'Reporting views for logged time by employee and period',
-      'Integration with existing MES system and database schema',
-      'SQL Server stored procedures for time aggregation queries',
-      'Input validation to reduce data entry errors',
+      'Shift-aware OT calculation — overtime computed from each shift\'s normal end time',
+      'Multi-step approval workflow: Draft → Submitted → Approved / Rejected',
+      'Department and status filtering with worklog search',
+      'Worklog entry modal with real-time work hours and OT preview',
+      'Management summary dashboard: working days, total hours, OT, pending approvals',
+      'React TypeScript frontend with .NET REST API and SQL Server stored procedures',
     ],
     highlights: [
-      'Improved data entry accuracy for daily timesheet operations',
-      'Reduced manual reporting effort through structured views',
-      'Built within existing enterprise stack without disrupting other modules',
+      'Shift-aware OT calculation — no manual hour adjustment needed',
+      'Approval workflow reduced review time for supervisors',
+      'Built within existing enterprise MES stack without disrupting other modules',
     ],
     status: 'completed',
     year: 2023,
