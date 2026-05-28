@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://franzforge.dev'),
   title: {
     default: 'Burapol Ussawawirulrit — Full-Stack Developer',
     template: '%s | Burapol Ussawawirulrit',

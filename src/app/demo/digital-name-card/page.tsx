@@ -7,7 +7,7 @@ import { useMemo, useState, useSyncExternalStore } from 'react';
 type ThemeKey = 'dark' | 'blue' | 'emerald' | 'minimal';
 type CopyTarget = 'email' | 'phone' | 'share' | 'vcard' | null;
 
-const FALLBACK_PORTFOLIO_URL = 'https://burapol-dev-portfolio.vercel.app';
+const FALLBACK_PORTFOLIO_URL = 'https://franzforge.dev';
 
 const PROFILE = {
   name: 'Burapol Ussawawirulrit',
