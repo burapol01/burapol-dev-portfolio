@@ -11,6 +11,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   demoUrl?: string;
+  backendUrl?: string;
   features: string[];
   highlights: string[];
   status: 'active' | 'completed' | 'in-progress';

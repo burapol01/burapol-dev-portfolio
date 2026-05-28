@@ -128,6 +128,14 @@ export default async function ProjectDetailPage({
                 View Source
               </Button>
             )}
+            {project.backendUrl && (
+              <Button href={project.backendUrl} variant="outline" external>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7a2 2 0 012-2h12a2 2 0 012 2v3H4V7zm0 6h16v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zm3-5h.01M7 16h.01" />
+                </svg>
+                Open Backend Service
+              </Button>
+            )}
             <Button href="/projects" variant="outline">
               Back to Projects
             </Button>
@@ -135,6 +143,11 @@ export default async function ProjectDetailPage({
               Discuss This Project
             </Button>
           </div>
+          {project.backendUrl && project.category === 'mobile' && (
+            <div className="mt-6 max-w-2xl rounded-xl border border-blue-500/20 bg-blue-500/10 px-4 py-3 text-sm text-blue-100">
+              Main project focus: Android mobile application. Backend service is provided as a supporting API/admin service.
+            </div>
+          )}
         </div>
       </section>
 

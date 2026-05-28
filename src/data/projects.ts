@@ -103,27 +103,30 @@ Safety was the primary design concern: every trade passes through configurable g
     slug: 'moveon-android-app',
     title: 'MoveOn - Android Application',
     shortDescription:
-      'Graduation project Android application focused on mobile user workflows and application development.',
-    longDescription: `**Problem:** Graduation projects need to demonstrate complete application delivery, including mobile screens, user flows, and supporting project logic rather than isolated code samples.
+      'Graduation project Android mobile application with a supporting backend service for managing app data and server-side operations.',
+    longDescription: `**Problem:** Mobile applications often need a supporting backend to manage data, user flows, and server-side operations beyond the device.
 
-**Solution:** MoveOn is an Android application project with user workflow screens such as login, registration, home, game, and profile sections, plus supporting project logic and backend-oriented assets.
+**Solution:** MoveOn was built as an Android graduation project focused on the mobile app experience, supported by a backend service for managing application data and related operations.
 
-**Implementation:** Built as a graduation project using Android Studio and Java, with related web/backend technologies noted in the repository including PHP, HTML, JavaScript, CSS, and MySQL. The project demonstrates Android application development, UI flow planning, and mobile app implementation.`,
-    tech: ['Android', 'Java', 'Mobile App', 'PHP', 'MySQL'],
+**Implementation:** Developed the main Android application and connected it with a backend service. The project demonstrates mobile UI flow, client-server integration, backend/API support, and deployment of a supporting web service.`,
+    tech: ['Android', 'Java', 'Mobile App', 'PHP', 'MySQL', 'Backend Service'],
     category: 'mobile',
     featured: false,
     githubUrl: 'https://github.com/burapol01/moveon',
+    backendUrl: 'https://moveon-juap.onrender.com',
     features: [
       'Android mobile application',
-      'User workflow screens',
-      'Mobile UI implementation',
-      'Local/project-based app logic',
+      'Mobile UI workflow',
+      'Backend service integration',
+      'Server-side data management support',
+      'Client-server communication',
       'Graduation project delivery',
     ],
     highlights: [
-      'Built as a graduation project',
-      'Demonstrates mobile application development experience',
-      'Adds Android/mobile development breadth to the portfolio',
+      'Main focus is the Android mobile application',
+      'Includes a supporting backend service',
+      'Demonstrates mobile + backend integration',
+      'Shows experience beyond web dashboard systems',
     ],
     status: 'completed',
     year: 2021,
