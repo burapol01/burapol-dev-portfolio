@@ -15,6 +15,7 @@ const categoryColor: Record<string, 'blue' | 'purple' | 'green' | 'orange' | 'sl
 
 export default function FeaturedProjects() {
   const featured = getFeaturedProjects();
+  const demoCount = projects.filter((project) => project.demoUrl).length;
 
   return (
     <section className="py-20">
@@ -30,7 +31,7 @@ export default function FeaturedProjects() {
             <div className="mt-5 grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
               {[
                 `${projects.length}+ Projects`,
-                '3 Interactive Demos',
+                `${demoCount} Interactive Demos`,
                 'Business Systems',
                 'Mobile + Automation',
               ].map((item) => (

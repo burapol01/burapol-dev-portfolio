@@ -160,6 +160,38 @@ Safety was the primary design concern: every trade passes through configurable g
     status: 'completed',
     year: 2026,
   },
+  {
+    id: '6',
+    slug: 'shotlink-short-link-service',
+    title: 'ShotLink - Short Link & QR Redirect Service',
+    shortDescription:
+      'A short-link and QR redirect service concept that converts long internal URLs into compact codes, supports duplicate checks, and simulates redirect execution with parameters.',
+    longDescription: `**Problem:** Long internal links are difficult to share, scan as QR codes, or route directly to specific pages and documents.
+
+**Solution:** A short-link service that stores full URLs, generates compact codes, supports QR-friendly access, and resolves short codes back to full links for redirect execution.
+
+**Implementation:** Designed around Insert Record, Get Link, Get QR Code, and Execute Blink URL service flows, with mock duplicate checking, app code/signature fields, and parameter preview.`,
+    tech: ['C#', '.NET', 'REST API', 'SQL Server', 'QR Code', 'Redirect Service'],
+    category: 'backend',
+    featured: false,
+    demoUrl: '/demo/shotlink',
+    features: [
+      'Short link generation',
+      'Duplicate full URL detection',
+      'QR code preview',
+      'Redirect execution preview',
+      'Parameter parsing',
+      'App code and signature metadata',
+      'Mock link registry',
+    ],
+    highlights: [
+      'Demonstrates backend service design thinking',
+      'Shows utility feature design for internal enterprise systems',
+      'Supports QR-friendly access and deep-link concepts',
+    ],
+    status: 'completed',
+    year: 2023,
+  },
 ];
 
 export const getFeaturedProjects = () => projects.filter((p) => p.featured);
