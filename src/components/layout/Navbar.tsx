@@ -23,10 +23,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -106,6 +102,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive
                       ? 'text-white bg-slate-800'
@@ -119,6 +116,7 @@ export default function Navbar() {
             <div className="pt-2">
               <Link
                 href="/contact"
+                onClick={() => setIsMenuOpen(false)}
                 className="block px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors text-center"
               >
                 Hire Me

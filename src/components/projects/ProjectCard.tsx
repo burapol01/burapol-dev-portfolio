@@ -8,6 +8,7 @@ const categoryColor: Record<string, 'blue' | 'purple' | 'green' | 'orange' | 'sl
   fullstack: 'purple',
   data: 'green',
   devops: 'slate',
+  mobile: 'green',
 };
 
 const statusColor: Record<string, string> = {
@@ -104,7 +105,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {/* Secondary: Case Study */}
             <Link
               href={`/projects/${project.slug}`}
-              className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-slate-700 hover:border-slate-500 text-slate-400 hover:text-white text-xs font-medium rounded-lg transition-colors whitespace-nowrap"
+              className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-blue-500/70 hover:border-blue-400 text-blue-400 hover:text-blue-300 text-xs font-medium rounded-lg transition-colors whitespace-nowrap"
             >
               Case Study
               <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,9 +117,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           /* Full-width button when no demo */
           <Link
             href={`/projects/${project.slug}`}
-            className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-slate-700 hover:border-blue-500 text-slate-400 hover:text-blue-400 text-xs font-medium rounded-lg transition-colors"
+            className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-blue-500/70 hover:border-blue-400 text-blue-400 hover:text-blue-300 text-xs font-medium rounded-lg transition-colors"
           >
-            View Details
+            Case Study
             <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

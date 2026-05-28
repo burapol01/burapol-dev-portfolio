@@ -13,6 +13,7 @@ const categories = [
   { key: 'automation', label: 'Automation' },
   { key: 'backend', label: 'Backend' },
   { key: 'fullstack', label: 'Full Stack' },
+  { key: 'mobile', label: 'Mobile' },
   { key: 'data', label: 'Data / Reporting' },
   { key: 'devops', label: 'DevOps' },
 ];

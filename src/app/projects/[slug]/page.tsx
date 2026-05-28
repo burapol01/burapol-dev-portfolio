@@ -11,6 +11,7 @@ const categoryColor: Record<string, 'blue' | 'purple' | 'green' | 'orange' | 'sl
   fullstack: 'purple',
   data: 'green',
   devops: 'slate',
+  mobile: 'green',
 };
 
 export async function generateStaticParams() {
@@ -75,6 +76,11 @@ export default async function ProjectDetailPage({
               {project.status}
             </span>
             <span className="text-xs text-slate-500">{project.year}</span>
+            {project.demoUrl && (
+              <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                Interactive Demo
+              </span>
+            )}
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
@@ -93,6 +99,18 @@ export default async function ProjectDetailPage({
 
           {/* Action buttons */}
           <div className="flex flex-wrap gap-3">
+            {project.demoUrl && (
+              <Link
+                href={project.demoUrl}
+                className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-600 hover:border-emerald-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Live Demo
+              </Link>
+            )}
             {project.liveUrl && (
               <Button href={project.liveUrl} variant="primary" external>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -109,6 +127,9 @@ export default async function ProjectDetailPage({
                 View Source
               </Button>
             )}
+            <Button href="/projects" variant="outline">
+              Back to Projects
+            </Button>
             <Button href="/contact" variant="ghost">
               Discuss This Project
             </Button>

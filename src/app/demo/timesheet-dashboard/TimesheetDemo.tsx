@@ -102,7 +102,7 @@ function parseTime(t: string): number {
 
 function calcHours(start: string, end: string, shift: Shift): { workHours: number; otHours: number } {
   if (!start || !end) return { workHours: 0, otHours: 0 };
-  let s = parseTime(start);
+  const s = parseTime(start);
   let e = parseTime(end);
   if (e <= s) e += 24;
   const total = e - s;
