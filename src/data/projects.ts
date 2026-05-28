@@ -128,6 +128,38 @@ Safety was the primary design concern: every trade passes through configurable g
     status: 'completed',
     year: 2021,
   },
+  {
+    id: '5',
+    slug: 'digital-name-card',
+    title: 'Digital Name Card Demo',
+    shortDescription:
+      'A polished interactive digital profile card for personal branding, quick contact sharing, QR preview, and contact action tracking mockups.',
+    longDescription: `**Problem:** Traditional resumes and contact details are static and not always convenient to share quickly during interviews, networking, or freelance discussions.
+
+**Solution:** A responsive digital name card that presents profile information, contact actions, portfolio links, and a QR-style sharing experience in one lightweight interface.
+
+**Implementation:** Built as a frontend-only Next.js demo using mock data, local UI state, clipboard actions, theme switching, and responsive card layouts.`,
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    category: 'frontend',
+    featured: false,
+    demoUrl: '/demo/digital-name-card',
+    features: [
+      'Interactive profile card preview',
+      'Theme switching',
+      'Copy contact actions',
+      'vCard download mock/action',
+      'QR-style portfolio preview',
+      'Mock engagement metrics',
+      'Responsive mobile-first layout',
+    ],
+    highlights: [
+      'Demonstrates polished product UI',
+      'Useful for personal branding and freelance outreach',
+      'Shows frontend interaction beyond internal business dashboards',
+    ],
+    status: 'completed',
+    year: 2026,
+  },
 ];
 
 export const getFeaturedProjects = () => projects.filter((p) => p.featured);

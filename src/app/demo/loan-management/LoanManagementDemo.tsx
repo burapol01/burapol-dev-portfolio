@@ -99,8 +99,8 @@ function monthLabel(ym: string) {
 }
 
 const TABLE_COLS = [
-  'Request No.', 'Farmer / Customer', 'Contract No.',
-  'Loan Type', 'Amount', 'Status', 'Created Date', 'Reviewer', 'Remark', 'Actions',
+  'Actions', 'Request No.', 'Farmer / Customer', 'Contract No.',
+  'Loan Type', 'Amount', 'Status', 'Created Date', 'Reviewer', 'Remark',
 ];
 
 // ─── Main Component ───────────────────────────────────────────────────────────
@@ -350,7 +350,7 @@ export default function LoanManagementDemo() {
               <thead>
                 <tr className="border-b border-slate-800 bg-slate-900/80">
                   {TABLE_COLS.map((col) => (
-                    <th key={col} className="px-3 py-3 text-left text-xs font-semibold text-slate-400 whitespace-nowrap">
+                    <th key={col} className={`px-3 py-3 text-left text-xs font-semibold text-slate-400 whitespace-nowrap ${col === 'Actions' ? 'w-[72px] min-w-[72px]' : ''}`}>
                       {col}
                     </th>
                   ))}
@@ -366,16 +366,7 @@ export default function LoanManagementDemo() {
                 ) : (
                   filtered.map((req) => (
                     <tr key={req.id} className="border-b border-slate-800/60 hover:bg-slate-800/30 transition-colors">
-                      <td className="px-3 py-3 font-mono text-xs text-blue-400 whitespace-nowrap">{req.requestNo}</td>
-                      <td className="px-3 py-3 text-slate-200 font-medium whitespace-nowrap">{req.farmerName}</td>
-                      <td className="px-3 py-3 font-mono text-xs text-slate-400 whitespace-nowrap">{req.contractNo}</td>
-                      <td className="px-3 py-3 text-slate-300 whitespace-nowrap">{req.loanType}</td>
-                      <td className="px-3 py-3 font-mono text-sm text-slate-200 text-right whitespace-nowrap">{fmtAmount(req.amount)}</td>
-                      <td className="px-3 py-3 whitespace-nowrap"><StatusBadge status={req.status} /></td>
-                      <td className="px-3 py-3 text-slate-400 text-xs whitespace-nowrap">{fmtDate(req.createdDate)}</td>
-                      <td className="px-3 py-3 text-slate-400 text-xs whitespace-nowrap">{req.reviewer || '—'}</td>
-                      <td className="px-3 py-3 text-slate-500 text-xs max-w-[160px] truncate">{req.remark || '—'}</td>
-                      <td className="px-3 py-3 whitespace-nowrap">
+                      <td className="px-3 py-3 w-[72px] min-w-[72px] whitespace-nowrap">
                         <ActionButtons
                           req={req}
                           onView={() => setViewRequest(req)}
@@ -385,6 +376,15 @@ export default function LoanManagementDemo() {
                           onReject={() => { setRejectTarget(req.id); setRejectReason(''); }}
                         />
                       </td>
+                      <td className="px-3 py-3 font-mono text-xs text-blue-400 whitespace-nowrap">{req.requestNo}</td>
+                      <td className="px-3 py-3 text-slate-200 font-medium whitespace-nowrap">{req.farmerName}</td>
+                      <td className="px-3 py-3 font-mono text-xs text-slate-400 whitespace-nowrap">{req.contractNo}</td>
+                      <td className="px-3 py-3 text-slate-300 whitespace-nowrap">{req.loanType}</td>
+                      <td className="px-3 py-3 font-mono text-sm text-slate-200 text-right whitespace-nowrap">{fmtAmount(req.amount)}</td>
+                      <td className="px-3 py-3 whitespace-nowrap"><StatusBadge status={req.status} /></td>
+                      <td className="px-3 py-3 text-slate-400 text-xs whitespace-nowrap">{fmtDate(req.createdDate)}</td>
+                      <td className="px-3 py-3 text-slate-400 text-xs whitespace-nowrap">{req.reviewer || '—'}</td>
+                      <td className="px-3 py-3 text-slate-500 text-xs max-w-[160px] truncate">{req.remark || '—'}</td>
                     </tr>
                   ))
                 )}

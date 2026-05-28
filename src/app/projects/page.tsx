@@ -12,6 +12,7 @@ const categories = [
   { key: 'all', label: 'All' },
   { key: 'automation', label: 'Automation' },
   { key: 'backend', label: 'Backend' },
+  { key: 'frontend', label: 'Frontend' },
   { key: 'fullstack', label: 'Full Stack' },
   { key: 'mobile', label: 'Mobile' },
   { key: 'data', label: 'Data / Reporting' },

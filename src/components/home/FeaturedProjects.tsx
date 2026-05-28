@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { getFeaturedProjects } from '@/data/projects';
+import { getFeaturedProjects, projects } from '@/data/projects';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 
 const categoryColor: Record<string, 'blue' | 'purple' | 'green' | 'orange' | 'slate'> = {
   automation: 'orange',
   backend: 'blue',
+  frontend: 'blue',
   fullstack: 'purple',
   data: 'green',
   devops: 'slate',
@@ -24,11 +25,14 @@ export default function FeaturedProjects() {
               Featured Projects
             </h2>
             <p className="text-slate-400 max-w-lg">
-              Selected work across automation, APIs, full-stack systems, and DevOps.
+              Featured highlights from a larger project portfolio.
+            </p>
+            <p className="text-sm text-slate-500 mt-2">
+              {projects.length}+ projects available across demos, automation work, and mobile apps.
             </p>
           </div>
           <Button href="/projects" variant="outline" size="md">
-            All Projects
+            View All Projects
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

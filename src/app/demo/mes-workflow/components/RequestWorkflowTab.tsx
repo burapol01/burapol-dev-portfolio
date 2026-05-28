@@ -301,14 +301,15 @@ const RequestWorkflowTab = forwardRef<RequestWorkflowTabHandle, {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-800 bg-slate-950/40">
-                {['Request No.', 'Request Title', 'Cost Center', 'Requester', 'Technician', 'Status', 'Created Date', 'Updated Date', 'Remark', 'Actions'].map((head) => (
-                  <th key={head} className="px-3 py-3 text-left text-xs font-semibold text-slate-400 whitespace-nowrap">{head}</th>
+                {['Actions', 'Request No.', 'Request Title', 'Cost Center', 'Requester', 'Technician', 'Status', 'Created Date', 'Updated Date', 'Remark'].map((head) => (
+                  <th key={head} className={`px-3 py-3 text-left text-xs font-semibold text-slate-400 whitespace-nowrap ${head === 'Actions' ? 'w-[72px] min-w-[72px]' : ''}`}>{head}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {requests.map((row) => (
                 <tr key={row.id} className="border-b border-slate-800/60 hover:bg-slate-800/30">
+                  <td className="px-3 py-3 w-[72px] min-w-[72px]"><ActionDropdown actions={actionsFor(row)} /></td>
                   <td className="px-3 py-3 font-mono text-xs text-slate-300 whitespace-nowrap">{row.id}</td>
                   <td className="px-3 py-3 text-slate-100 font-medium max-w-[260px] truncate" title={row.title}>{row.title}</td>
                   <td className="px-3 py-3 text-slate-400 whitespace-nowrap">{row.costCenter}</td>
@@ -318,7 +319,6 @@ const RequestWorkflowTab = forwardRef<RequestWorkflowTabHandle, {
                   <td className="px-3 py-3 text-slate-400 whitespace-nowrap">{formatDate(row.createdDate)}</td>
                   <td className="px-3 py-3 text-slate-400 whitespace-nowrap">{formatDate(row.updatedDate)}</td>
                   <td className="px-3 py-3 text-slate-500 max-w-[220px] truncate" title={row.remark}>{row.remark || '-'}</td>
-                  <td className="px-3 py-3"><ActionDropdown actions={actionsFor(row)} /></td>
                 </tr>
               ))}
             </tbody>

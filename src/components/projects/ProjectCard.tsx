@@ -5,6 +5,7 @@ import Badge from '@/components/ui/Badge';
 const categoryColor: Record<string, 'blue' | 'purple' | 'green' | 'orange' | 'slate'> = {
   automation: 'orange',
   backend: 'blue',
+  frontend: 'blue',
   fullstack: 'purple',
   data: 'green',
   devops: 'slate',
