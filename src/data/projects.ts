@@ -192,6 +192,39 @@ Safety was the primary design concern: every trade passes through configurable g
     status: 'completed',
     year: 2023,
   },
+  {
+    id: '7',
+    slug: 'gpf-internal-application-enhancement',
+    title: 'GPF Internal Application Enhancement & CDN Asset Review',
+    shortDescription:
+      'Supported enhancement and maintenance of internal GPF applications, including bug investigation, local environment setup, static asset path review, CDN-related front-end adjustments, unit testing support, and deployment workflow support.',
+    longDescription: `**Problem:** Internal enterprise applications often require careful maintenance, environment setup, asset path review, testing, and deployment coordination to support stable day-to-day operations.
+
+**Solution:** Supported application enhancement and maintenance by investigating issues, reviewing configurations, improving local setup, checking static asset references, and supporting CDN-related front-end adjustments.
+
+**Implementation:** Worked across UI, application configuration, C#/.NET Core, MS SQL Server, and Jenkins CI/CD workflow support. Reviewed documentation and project behavior to support safe changes, unit testing, and deployment readiness.`,
+    tech: ['C#', '.NET Core', 'MS SQL Server', 'JavaScript', 'Jenkins', 'CI/CD', 'Enterprise Application Support'],
+    category: 'fullstack',
+    featured: false,
+    features: [
+      'Internal application maintenance support',
+      'Bug investigation and issue analysis',
+      'Local environment setup review',
+      'Static asset path review',
+      'CDN-related front-end adjustment support',
+      'Unit testing support',
+      'Deployment workflow support',
+      'Documentation review and follow-up notes',
+    ],
+    highlights: [
+      'Supported enterprise application enhancement in an on-site contract role',
+      'Worked across UI, configuration, backend, database, and deployment workflow areas',
+      'Helped review static asset paths and CDN migration-related concerns',
+      'Practiced safe documentation-driven investigation and follow-up tracking',
+    ],
+    status: 'completed',
+    year: 2026,
+  },
 ];
 
 export const getFeaturedProjects = () => projects.filter((p) => p.featured);
