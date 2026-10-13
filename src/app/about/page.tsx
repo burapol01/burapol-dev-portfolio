@@ -5,20 +5,28 @@ import Button from '@/components/ui/Button';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Full-Stack Developer with experience in C#, .NET, React, TypeScript, MS SQL Server, and CI/CD pipelines. Based in Bangkok, Thailand.',
+    'Backend-focused .NET developer with experience in C#, .NET 8, SQL Server, REST APIs, React, and CI/CD workflows. Based in Bangkok, Thailand.',
 };
 
 const experiences = [
   {
-    period: 'Mar 2026 – Apr 2026',
+    period: 'Jun 2026 - Dec 2026',
+    role: 'Programmer (Backend / .NET Developer)',
+    company: 'Tokio Marine Life Insurance (Thailand) PCL. (Contract)',
+    description:
+      'Contributed to the Fast Track Revamp by modernizing legacy insurance APIs and application workflows with C# and .NET 8. Developed submission and client-processing components with data mapping, business rules, and juvenile applicant and payer validation. Integrated SQL Server stored procedures, verified controlled database writes and readbacks during UAT, and added diagnostic logging, regression checks, and technical documentation.',
+    tech: ['C#', '.NET 8', 'REST APIs', 'SQL Server', 'Stored Procedures', 'UAT Verification', 'Logging'],
+  },
+  {
+    period: 'Mar 2026 - Apr 2026',
     role: 'Full-Stack Developer (Contract)',
-    company: 'Cloud Fission Co., Ltd. — On-site at Government Pension Fund (GPF)',
+    company: 'Cloud Fission Co., Ltd. | On-site at Government Pension Fund (GPF)',
     description:
       'Supported enhancement and maintenance of internal GPF applications. Investigated and resolved bugs, reviewed system configurations, and improved local environment setup. Reviewed static asset paths and supported CDN-related front-end adjustments. Assisted with unit testing and deployment workflow support.',
     tech: ['C#', '.NET Core', 'MS SQL Server', 'Jenkins', 'CI/CD'],
   },
   {
-    period: 'Jul 2022 – Dec 2025',
+    period: 'Jul 2022 - Dec 2025',
     role: 'Software Developer (Junior)',
     company: 'Thai Roong Ruang Technologies Co., Ltd.',
     description:
@@ -59,20 +67,18 @@ export default function AboutPage() {
                 Burapol Ussawawirulrit
               </h1>
               <p className="text-xl text-slate-300 font-medium mb-6">
-                Full-Stack Developer · Bangkok, Thailand
+                Backend / .NET Developer · Bangkok, Thailand
               </p>
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  Full-Stack Developer with experience building backend services and
-                  web applications. Skilled in C#, .NET Framework, .NET 8, RESTful
-                  API development, React, JavaScript, TypeScript, MS SQL Server, and
-                  Stored Procedures.
+                  Backend-focused developer with experience modernizing APIs and
+                  business workflows. Skilled in C#, .NET Framework, .NET Core,
+                  .NET 8, REST API development, MS SQL Server, and Stored Procedures.
                 </p>
                 <p>
-                  Comfortable working end-to-end across UI, API, database, and
-                  deployment workflows. I have delivered modules in enterprise internal
-                  systems and have hands-on experience with Git, Azure DevOps, Jenkins,
-                  CI/CD, Docker, and Python.
+                  Comfortable working across UI, API, database, testing, and deployment
+                  workflows. Hands-on experience includes React, TypeScript, Git, Azure
+                  DevOps, Jenkins, CI/CD, Docker, Python, and technical documentation.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 mt-8">
@@ -92,22 +98,13 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: '3+', label: 'Years Experience' },
-                { value: '3+', label: 'Projects Delivered' },
-                { value: '.NET', label: 'Primary Backend' },
-                { value: 'React', label: 'Primary Frontend' },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl border border-slate-800 bg-slate-900/60 p-6 text-center"
-                >
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-slate-400">{stat.label}</div>
-                </div>
-              ))}
+            <div className="border-l-2 border-teal-400 pl-6 py-3">
+              <p className="text-sm font-semibold text-teal-300 mb-4">Current focus</p>
+              <ul className="space-y-4 text-sm text-slate-300 leading-relaxed">
+                <li>Backend API modernization with C# and .NET 8.</li>
+                <li>SQL Server workflows, data validation, and stored procedure integration.</li>
+                <li>Testing evidence, logging, and release-readiness support.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -204,11 +201,11 @@ export default function AboutPage() {
             Let&apos;s Work Together
           </h2>
           <p className="text-slate-400 mb-8 max-w-md mx-auto">
-            Open to full-time roles and freelance projects. Response within 24 hours.
+            View experience details, project case studies, or resume.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Button href="/contact" variant="primary" size="lg">
-              Contact Me
+            <Button href="/projects" variant="primary" size="lg">
+              View Projects
             </Button>
             <Button
               href="/resume/burapol-ussawawirulrit-resume.pdf"

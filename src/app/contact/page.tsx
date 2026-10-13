@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Burapol Ussawawirulrit — Full-Stack Developer based in Bangkok, Thailand. Open to full-time roles and freelance projects.',
+    'Get in touch with Burapol Ussawawirulrit, a Backend / .NET Developer based in Bangkok, Thailand.',
 };
 
 export default function ContactPage() {
@@ -20,8 +20,7 @@ export default function ContactPage() {
             Contact Me
           </h1>
           <p className="text-slate-400 max-w-xl text-lg">
-            Open to full-time roles, freelance projects, and technical discussions.
-            I respond within 24 hours.
+            For full-time roles, scoped freelance work, and technical discussions.
           </p>
         </div>
       </section>
@@ -85,7 +84,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Response time */}
                 <div className="flex items-start gap-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60">
                   <div className="p-2.5 rounded-lg bg-slate-800 border border-slate-700 shrink-0">
                     <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,23 +91,16 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500 mb-0.5">Response Time</p>
-                    <p className="text-sm text-slate-300">Within 24 hours</p>
+                    <p className="text-xs text-slate-500 mb-0.5">Professional focus</p>
+                    <p className="text-sm text-slate-300">Backend / .NET development</p>
                   </div>
                 </div>
               </div>
 
-              {/* Availability badge */}
-              <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                  </span>
-                  <span className="text-sm font-medium text-emerald-400">Available Now</span>
-                </div>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  Currently accepting new full-time roles and freelance projects.
+              <div className="border-l-2 border-teal-400 pl-5 py-1">
+                <p className="text-sm font-medium text-teal-300">Current contract experience</p>
+                <p className="text-xs text-slate-400 leading-relaxed mt-1">
+                  Fast Track Revamp, Tokio Marine Life Insurance (Thailand) PCL.
                 </p>
               </div>
             </div>
@@ -120,8 +111,8 @@ export default function ContactPage() {
 
               <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 space-y-4">
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  The best way to reach me is by email. I check it daily and respond
-                  promptly. For urgent matters, phone is also available.
+                  Email is best for role details, project context, or a portfolio discussion.
+                  Phone is also available.
                 </p>
 
                 <div className="space-y-3 pt-2">

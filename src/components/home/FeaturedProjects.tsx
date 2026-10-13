@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getFeaturedProjects, projects } from '@/data/projects';
+import { getFeaturedProjects } from '@/data/projects';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 
@@ -15,7 +15,6 @@ const categoryColor: Record<string, 'blue' | 'purple' | 'green' | 'orange' | 'sl
 
 export default function FeaturedProjects() {
   const featured = getFeaturedProjects();
-  const demoCount = projects.filter((project) => project.demoUrl).length;
 
   return (
     <section className="py-20">
@@ -26,29 +25,11 @@ export default function FeaturedProjects() {
               Featured Projects
             </h2>
             <p className="text-slate-400 max-w-lg">
-              Featured highlights from a larger project portfolio.
+              Business systems, integration workflows, and developer tools with working demos.
             </p>
-            <div className="mt-5 grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
-              {[
-                `${projects.length}+ Projects`,
-                `${demoCount} Interactive Demos`,
-                'Business Systems',
-                'Mobile + Automation',
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="inline-flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs font-semibold text-slate-300"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
           <Button href="/projects" variant="outline" size="md">
-            View All {projects.length}+ Projects
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            View All Projects
           </Button>
         </div>
 

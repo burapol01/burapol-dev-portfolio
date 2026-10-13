@@ -23,7 +23,7 @@ export default function Footer() {
               <span className="text-blue-400 font-mono">/&gt;</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Full Stack Developer specializing in .NET, React, and DevOps automation.
+              Backend / .NET Developer focused on APIs, SQL Server integration, and business workflows.
             </p>
           </div>
 

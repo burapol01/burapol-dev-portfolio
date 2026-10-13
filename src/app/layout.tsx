@@ -17,13 +17,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://franzforge.dev'),
   title: {
-    default: 'Burapol Ussawawirulrit — Full-Stack Developer',
+    default: 'Burapol Ussawawirulrit | Backend / .NET Developer',
     template: '%s | Burapol Ussawawirulrit',
   },
   description:
-    'Full-Stack Developer based in Bangkok, Thailand. Experienced in C#, .NET, React, TypeScript, MS SQL Server, and CI/CD pipelines. Available for full-time roles and freelance projects.',
+    'Backend-focused .NET developer based in Bangkok, Thailand. Experienced in C#, .NET 8, SQL Server integration, REST APIs, React, and CI/CD workflows.',
   keywords: [
-    'Full Stack Developer',
+    'Backend Developer',
     '.NET Developer',
     'React Developer',
     'TypeScript',
@@ -39,16 +39,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Burapol Ussawawirulrit — Full-Stack Developer',
+    title: 'Burapol Ussawawirulrit | Backend / .NET Developer',
     description:
-      'Full-Stack Developer experienced in C#, .NET, React, TypeScript, MS SQL Server, and CI/CD pipelines.',
+      'Backend-focused .NET developer experienced in C#, .NET 8, SQL Server integration, REST APIs, React, and CI/CD workflows.',
     siteName: 'Burapol Ussawawirulrit Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Burapol Ussawawirulrit — Full-Stack Developer',
+    title: 'Burapol Ussawawirulrit | Backend / .NET Developer',
     description:
-      'Full-Stack Developer experienced in C#, .NET, React, TypeScript, MS SQL Server, and CI/CD pipelines.',
+      'Backend-focused .NET developer experienced in C#, .NET 8, SQL Server integration, REST APIs, React, and CI/CD workflows.',
   },
   robots: {
     index: true,

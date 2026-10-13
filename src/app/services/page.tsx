@@ -21,8 +21,8 @@ export default function ServicesPage() {
             What I Can Build for You
           </h1>
           <p className="text-slate-400 max-w-xl text-lg">
-            Available for freelance projects and long-term contracts. I work
-            independently and deliver production-ready systems.
+            Services shaped around backend APIs, business workflows, SQL Server, and
+            supporting web interfaces.
           </p>
         </div>
       </section>
@@ -77,18 +77,18 @@ export default function ServicesPage() {
             {[
               {
                 icon: '🎯',
-                title: 'Production-Ready',
-                desc: 'Code that ships and stays shipped. Proper error handling, logging, and deployment.',
+                title: 'Practical Delivery',
+                desc: 'Scope-aware implementation with logging, testing, and documentation where needed.',
               },
               {
                 icon: '⚡',
-                title: 'Fast Delivery',
-                desc: 'Focused scope, clean implementation. No over-engineering.',
+                title: 'Focused Scope',
+                desc: 'Clear requirements and a maintainable implementation without unnecessary complexity.',
               },
               {
                 icon: '🔧',
-                title: 'Full Stack',
-                desc: 'I handle both ends. No handoff gaps between frontend and backend.',
+                title: 'Across Layers',
+                desc: 'Comfortable working from the interface through API and database workflows.',
               },
               {
                 icon: '🤝',
@@ -120,7 +120,7 @@ export default function ServicesPage() {
               { step: '01', title: 'Discovery', desc: 'You describe what you need. I ask the right questions to scope it clearly.' },
               { step: '02', title: 'Proposal', desc: 'I send a clear proposal: scope, timeline, and price. No hidden costs.' },
               { step: '03', title: 'Build', desc: 'I build iteratively with regular check-ins. You always know where things stand.' },
-              { step: '04', title: 'Deliver', desc: 'Deployed, tested, documented. Handoff with full source code and setup notes.' },
+              { step: '04', title: 'Handoff', desc: 'Testing notes, documentation, and agreed delivery materials.' },
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-start">
                 <span className="text-5xl font-bold text-slate-800 mb-3 font-mono">
